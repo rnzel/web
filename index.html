@@ -482,6 +482,11 @@
     </style>
 </head>
 <body>
+
+    <audio id="bgMusic" loop>
+    <source src="assets/music/bouquet-of-love.mp3" type="audio/mpeg">
+    </audio>
+    
     <!-- Floating Hearts Background -->
     <div class="wrapper" id="floatingContainer">
         <div class="heart x1"></div>
@@ -522,6 +527,12 @@
     </div>
 
     <script>
+        document.addEventListener('click', function () {
+           const music = document.getElementById('bgMusic');
+           music.volume = 0.3;
+           music.play();
+        }, { once: true });
+        
         function showLoveAnimation() {
             const overlay = document.getElementById('animationOverlay');
             overlay.classList.add('active');
