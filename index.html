@@ -398,6 +398,16 @@
             height: 200px;
         }
 
+        .cat {
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            color: #c44569;
+            font-weight: 600;
+        }
+
         @keyframes scaleIn {
             0% {
                 transform: scale(0);
@@ -530,8 +540,9 @@
         <div class="love-message">I Love You Baa! 💕</div>
 
         <div class="cat">'
-            <img src="cat.png" alt="">
+            <img src="cat.png" alt="" onclick="showLoveAnimation()" style="cursor: pointer;">
         </div>
+        <p>Tap the cat</p>
     </div>
 
     <script>
@@ -564,14 +575,8 @@
                 
                 overlay.appendChild(flower);
                 
-                setTimeout(() => flower.remove(), 1500);
             }
 
-            // Close after animation
-            setTimeout(() => {
-                overlay.classList.remove('active');
-                closeLetter();
-            }, 10000);
         }
 
         function openLetter() {
@@ -607,6 +612,7 @@
                 document.getElementById('landingPage').classList.remove('hidden');
             }, 1500);
         }
+        
     </script>
 </body>
 </html>
