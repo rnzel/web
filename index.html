@@ -396,11 +396,19 @@
 
         .cat img {
             height: 200px;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         .cat {
             display: flex;
             justify-content: center;
+        }
+
+        .cat img:hover {
+            background: none;
         }
 
         p {
